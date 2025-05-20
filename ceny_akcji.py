@@ -31,7 +31,7 @@ fig.add_trace(go.Scatter(x=cuprum_data['Data'],
 
 #dodaj tabelę jako trzeci wykres
 fig.add_trace(go.Table(header=dict(values=['Data','KGHM','Miedź'],
-                                   font=dict(weight='bold')),
+                                   font=dict(size=14)),
                        cells=dict(values=[merged_data['Data'], 
                                           merged_data['Zamkniecie_kghm'].apply(lambda x: f"{x:.2f}" if pd.notna(x) else "-"), 
                                           merged_data['Zamkniecie_cuprum'].apply(lambda x: f"{x:.2f}" if pd.notna(x) else "-")
